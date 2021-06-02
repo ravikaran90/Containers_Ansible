@@ -1,0 +1,9 @@
+- name: Information about logged in users
+  hosts: controller,frontend-1, frontend-2, backend-1, backend-2
+  become: yes
+  tasks:
+    - name: Executing Who command
+      command: 'w -i -f'
+      register: connected_user_info
+    - debug: msg="{{connected_user_info.stdout_lines}}"
+    - local_action: copy content={{connected_user_info.stdout_lines}} dest=connected_users_node_date_time.log
