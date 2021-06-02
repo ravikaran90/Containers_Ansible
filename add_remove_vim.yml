@@ -1,0 +1,14 @@
+- name: Installing vim package on frontend-2, backend-1 and backend-2
+  hosts: frontend-2,backend-1,backend-2,controller
+  tasks:
+    - name: Installing vim 
+      yum: 
+        name: vim
+        state: present
+- name: Removing vim on frontend-1 if installed
+  hosts: frontend-1
+  tasks:  
+    - name: Removing vim
+      yum:
+        name: vim
+        state: removed
