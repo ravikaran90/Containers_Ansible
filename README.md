@@ -35,4 +35,4 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@controller -> yes -> password ssh-copy-id 
 
 Run the add_remove_vim.yml with ansible-playbook #ansible-playbook -K add_remove_vim.yml
 
-Run the who_command_users_info.yml with ansible-playbook #ansible-playbook -K who_command_users_info.yml
+Run the who_command_users_info.yml with ansible-playbook #ansible-playbook -K info_users.yml
