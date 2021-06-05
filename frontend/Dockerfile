@@ -6,6 +6,8 @@ RUN yum install httpd openssh-server expect net-tools sudo -y; systemctl enable 
 
 COPY password.exp /usr/local/bin/password.exp
 
+RUN expect /usr/local/bin/password.exp
+
 EXPOSE 80
 
 CMD ["/usr/sbin/init"]
