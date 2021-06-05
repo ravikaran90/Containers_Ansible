@@ -25,9 +25,9 @@ vi /etc/hosts
 
 From controller:
 ssh-copy-id frontend-1 -> yes -> frontend-1's root password,
-ssh-copy-id frontend-2 -> yes -> frontend-1's root password,
-ssh-copy-id backend-1 -> yes -> frontend-1's root password,
-ssh-copy-id backend-1 -> yes -> frontend-1's root password
+ssh-copy-id frontend-2 -> yes -> frontend-2's root password,
+ssh-copy-id backend-1 -> yes -> backend-1's root password,
+ssh-copy-id backend-2 -> yes -> backend-2's root password
 
 Run the add_remove_vim.yml with ansible-playbook #ansible-playbook -K add_remove_vim.yml
 
