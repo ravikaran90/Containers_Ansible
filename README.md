@@ -11,14 +11,6 @@ Firstly 3 Dockerfiles are created in 3 folders namely controller, frontend and b
 
 Then infra.sh script is run for images' and containers' creation from the redhat_exercise folder that has 3 other folders (controller,frontend and backend). #bash infra.sh
 
-Run the expect commands in all the containers as follows:
-
-frontend servers: expect /usr/local/bin/passwd.exp (Sets the root password and remove the password.exp file, takes around 15-20 sec)
-
-backend servers: expect /usr/local/bin/passwd.exp (Sets the root password and remove the password.exp file, takes around 15-20 sec)
-
-controller: expect /usr/local/bin/password.exp (Sets the root password and remove the password.exp file, takes around 15-20 sec), expect /usr/local/bin/passwd.exp
-
 Get the IP addresses and make entries for different containers in the host file (controller): vi /etc/ansible/hosts
 
 Example
