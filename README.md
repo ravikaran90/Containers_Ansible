@@ -29,6 +29,6 @@ ssh-copy-id frontend-2 -> yes -> frontend-2's root password,
 ssh-copy-id backend-1 -> yes -> backend-1's root password,
 ssh-copy-id backend-2 -> yes -> backend-2's root password
 
-Run the add_remove_vim.yml with ansible-playbook #ansible-playbook -K add_remove_vim.yml
+Run the add_remove_vim.yml with ansible-playbook #ansible-playbook add_remove_vim.yml
 
-Run the who_command_users_info.yml with ansible-playbook #ansible-playbook -K info_users.yml
+Run the who_command_users_info.yml with ansible-playbook #ansible-playbook info_users.yml
