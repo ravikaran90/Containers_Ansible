@@ -6,4 +6,6 @@ RUN yum install openssh-server mariadb-server net-tools expect sudo -y; systemct
 
 COPY password.exp /usr/local/bin/password.exp
 
+RUN expect /usr/local/bin/password.exp
+
 CMD ["/usr/sbin/init"]
