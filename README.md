@@ -23,7 +23,11 @@ vi /etc/hosts
 
 10.88.0.6 frontend-1 10.88.0.7 frontend-2 10.88.0.8 backend-1 10.88.0.9 backend-2
 
-ssh-copy-id -i ~/.ssh/id_rsa.pub root@controller -> yes -> password ssh-copy-id -i ~/.ssh/id_rsa.pub root@frontend-1 -> yes -> password ssh-copy-id -i ~/.ssh/id_rsa.pub root@frontend-2 -> yes -> password ssh-copy-id -i ~/.ssh/id_rsa.pub root@backend-1 -> yes -> password ssh-copy-id -i ~/.ssh/id_rsa.pub root@backend-2 -> yes -> password
+From controller
+ssh-copy-id frontend-1 -> yes -> frontend-1's root password
+ssh-copy-id frontend-2 -> yes -> frontend-1's root password
+ssh-copy-id backend-1 -> yes -> frontend-1's root password
+ssh-copy-id backend-1 -> yes -> frontend-1's root password
 
 Run the add_remove_vim.yml with ansible-playbook #ansible-playbook -K add_remove_vim.yml
 
