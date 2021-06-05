@@ -6,4 +6,6 @@ RUN yum install openssh-server openssh-clients net-tools lynx epel-release expec
 
 COPY sshkey_password.exp /usr/local/bin/sshkey_password.exp
 
+RUN expect /usr/local/bin/sshkey_password.exp
+
 CMD ["/usr/sbin/init"]
